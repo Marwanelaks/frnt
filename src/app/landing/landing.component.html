@@ -1,0 +1,76 @@
+<!-- <p>{{ landing }}</p> -->
+
+<!-- <input class="form-input" [type]="btn">
+<input class="form-control" type="text" [(ngModel)]="hosting">
+<div>{{hosting}}</div>
+<button (click)="changeHandle()" class="btn btn-primary">Change</button> -->
+<!-- landing.component.html -->
+
+<div class="form-group">
+  <label for="nom">Inpt:</label>
+  <input type="text" class="form-control" id="nom" [(ngModel)]="inpt" placeholder="Enter your name" />
+</div>
+<h6>{{nom}}</h6>
+<div class="container mt-5">
+   <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+     <div class="form-group">
+       <label for="nom">Nom:</label>
+       <input formControlName="nom" type="text" class="form-control" id="nom" placeholder="Enter your name" />
+     </div>
+     <div class="form-group">
+       <label for="cine">Cine:</label>
+       <input formControlName="cine" type="text" class="form-control" id="cine" placeholder="Enter your cine" />
+     </div>
+     <div class="form-group">
+       <label for="email">Email:</label>
+       <input formControlName="email" type="email" class="form-control" id="email" placeholder="Enter your email" />
+     </div>
+     <div class="form-group">
+       <label for="phone">Phone:</label>
+       <input formControlName="phone" type="tel" class="form-control" id="phone" placeholder="Enter your phone number" />
+     </div>
+     <div class="mb-3">
+      <label for="file">Profile Image:</label>
+      <input type="file" class="form-control" id="file" formControlName="fileImg">
+    </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+ </div>
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+<!-- <div *ngIf="employees">
+   <h3>Employee List</h3>
+   <ul>
+     <li *ngFor="let employee of employees">
+       <div>
+         <strong>ID:</strong> {{ employee.id }}
+       </div>
+       <div>
+         <strong>Name:</strong> {{ employee.nom }}
+       </div>
+       <div>
+         <strong>Email:</strong> {{ employee.email }}
+       </div>
+       <div>
+         <strong>CIN:</strong> {{ employee.cine }}
+       </div>
+       <div>
+         <strong>Phone:</strong> {{ employee.phone }}
+       </div>
+       <div *ngIf="employee.profileImgUrl">
+         <img src="{{ employee.profileImgUrl }}" alt="Profile Image">
+       </div>
+     </li>
+   </ul>
+ </div> -->
+ 

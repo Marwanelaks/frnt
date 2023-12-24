@@ -1,0 +1,69 @@
+<p>test works!</p>
+<div class="container mt-5">
+   <form (submit)="HandleSub($event)"  >
+      <!-- <ng-form> -->
+      <div class="form-group">
+         <label for="nom">Nom:{{Nom}}</label>
+         <input [(ngModel)]="Nom" name="nom" type="text" class="form-control" id="nom" placeholder="Enter your name"/>
+       </div>
+
+       <div class="form-group">
+         <label for="cine">Cine:</label>
+         <input [(ngModel)]="Cin" name="cin" type="text" class="form-control" id="cine" placeholder="Enter your cine"/>
+       </div>
+       <div class="form-group">
+         <label for="email">Email:</label>
+         <input [(ngModel)]="Email" name="email" type="email" class="form-control" id="email" placeholder="Enter your email"/>
+       </div>
+       <div class="form-group">
+         <label for="phone">Phone:</label>
+         <input [(ngModel)]="Phone" name="phone" type="tel" class="form-control" id="phone" placeholder="Enter your phone number"/>
+       </div>
+       
+     <div class="form-group">
+       <label for="file">Image:</label>
+       <input (change)="handleFileInput($event)" type="file" class="form-control" id="file" placeholder="Enter your phone number"/>
+     </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+   <!-- </ng-form> -->
+   </form>
+ </div>
+<section class="container my-5">
+<!-- ... your existing form ... -->
+
+<div class="container mt-5">
+   <h2>Data Table</h2>
+   <table class="table">
+     <thead>
+       <tr>
+         <th>ID</th>
+         <th>Nom</th>
+         <th>Cin</th>
+         <th>Email</th>
+         <th>Phone</th>
+         <th>Actions</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let item of data">
+         <td>{{ item.id }}</td>
+         <td>{{ item.nom }}</td>
+         <td>{{ item.cine }}</td>
+         <td>{{ item.email }}</td>
+         <td>{{ item.phone }}</td>
+         <td>
+           <!-- <button class="btn btn-primary m-2" (click)="updateData(item.id)">Update</button> -->
+           <button class="btn btn-danger" (click)="deleteData(item.id)">Delete</button>
+           <button class="btn btn-primary m-2" (click)="viewDetails(item.id)">View More</button>
+         </td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
+ 
+</section>
+
+
+
+
+ 

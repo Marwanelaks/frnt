@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+  
+
+<!-- details.component.html -->
+<div class="container">
+   <h2>Details</h2>
+   <div>
+     <label>ID:</label>
+     <span>{{ details.id }}</span>
+   </div>
+   <div>
+     <label>Nom:</label>
+     <span>{{ details.nom }}</span>
+   </div>
+   <div>
+     <label>Email:</label>
+     <span>{{ details.email }}</span>
+   </div>
+   <div>
+     <label>Cine:</label>
+     <span>{{ details.cine }}</span>
+   </div>
+   <div>
+     <label>Phone:</label>
+     <span>{{ details.phone }}</span>
+   </div>
+   <div>
+     <label>Profile Image:</label>
+     <img *ngIf="details.profileImgUrl" [src]="details.profileImgUrl" alt="Profile Image" class="img-fluid" />
+   </div>
+ </div>
+ 
+ 
+
+</body>
+</html>
